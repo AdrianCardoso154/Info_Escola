@@ -60,6 +60,14 @@ public class Escola implements Serializable {
     public Endereco getEndereco(){
         return endereco;
     }
+    //LIGAÇÃO MANY TO MANY COM INSTRUTOR
+    @ManyToMany(mappedBy = "escolas")
+    @JsonIgnore
+    List<Instrutor> instrutors = new ArrayList<>();
+
+    public List<Instrutor> getInstrutors() {
+        return instrutors;
+    }
 
     public UUID getId() {
         return id;

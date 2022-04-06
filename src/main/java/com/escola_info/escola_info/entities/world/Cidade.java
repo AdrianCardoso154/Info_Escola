@@ -30,6 +30,7 @@ public class Cidade  implements Serializable {
     @ManyToMany(mappedBy = "cidades")
     @JsonIgnore
     List<Endereco> enderecos = new ArrayList<>();
+
     //LIGAÇÃO MANY TO ONE COM ESTADO
     @ManyToOne
     @JoinColumn(name = "estado_id")
