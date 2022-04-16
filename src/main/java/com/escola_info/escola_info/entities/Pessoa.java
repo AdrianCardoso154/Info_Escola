@@ -1,6 +1,8 @@
 package com.escola_info.escola_info.entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.MappedSuperclass;
+import javax.persistence.OneToOne;
 
 @MappedSuperclass//mapeamento para super classes
 public abstract class Pessoa {
@@ -19,6 +21,15 @@ public abstract class Pessoa {
 
     public Pessoa() {
 
+    }
+    @OneToOne
+    private Endereco endereco;
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 
     public String getName() {

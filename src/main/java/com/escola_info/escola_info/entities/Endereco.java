@@ -49,6 +49,11 @@ public class Endereco implements Serializable {
         return escolas;
     }
 
+    //LIGAÇÃO ONE TO ONE COM END
+    @OneToOne(mappedBy = "endereco")
+    private Instrutor instrutor;
+
+
     public UUID getId() {
         return id;
     }

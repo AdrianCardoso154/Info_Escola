@@ -24,7 +24,7 @@ public class Instrutor extends Pessoa{
 
     //LIGAÇÃO MANY TO MANY COM ESCOLA
     @ManyToMany
-    @JoinTable(name = "tb_instrutor_end",joinColumns = @JoinColumn(name = "id_instrutor"), inverseJoinColumns = @JoinColumn(name = "id_end"))
+    @JoinTable(name = "tb_instrutor_escola",joinColumns = @JoinColumn(name = "id_instrutor"), inverseJoinColumns = @JoinColumn(name = "id_esc"))
     List<Escola> escolas = new ArrayList<>();
 
     public List<Escola> getEscolas(){
