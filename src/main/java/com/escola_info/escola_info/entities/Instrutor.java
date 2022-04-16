@@ -7,22 +7,21 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "tb_instrutor")
-public class Instrutor {
+public class Instrutor extends Pessoa{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
-    private String name;
-    //Mudar para instante_date
-    private String data_nsc;
-    private String sexo;
 
-    public Instrutor(){super();}
-
-    public Instrutor(String name, String data_nsc, String sexo) {
-        this.name = name;
-        this.data_nsc = data_nsc;
-        this.sexo = sexo;
+    public Instrutor() {
+        super();
     }
+
+    public Instrutor(String name, String data_nsc, String sexo, String cpf, UUID id) {
+        super(name, data_nsc, sexo, cpf);
+        this.id = id;
+    }
+
+
     //LIGAÇÃO MANY TO MANY COM ESCOLA
     @ManyToMany
     @JoinTable(name = "tb_instrutor_end",joinColumns = @JoinColumn(name = "id_instrutor"), inverseJoinColumns = @JoinColumn(name = "id_end"))
@@ -40,29 +39,7 @@ public class Instrutor {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getData_nsc() {
-        return data_nsc;
-    }
-
-    public void setData_nsc(String data_nsc) {
-        this.data_nsc = data_nsc;
-    }
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
 
     @Override
     public boolean equals(Object o) {
