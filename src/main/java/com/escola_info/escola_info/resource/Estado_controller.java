@@ -41,7 +41,7 @@ public class Estado_controller {
         Estado estado1 = service.findbyId(id);
         var estado02 = new Estado();
         BeanUtils.copyProperties(estado,estado02);
-        estado02.setId(estado.getId());
+        estado02.setId(estado1.getId());
         return ResponseEntity.status(HttpStatus.OK).body(service.salvar(estado02)+"ATUALIZADO COM SUCESSO");
     }
 }

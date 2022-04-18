@@ -39,7 +39,7 @@ public class Cidade_Controller {
         Cidade cidade1 = service.findbyId(id);
         var cidade02 = new Cidade();
         BeanUtils.copyProperties(cidade,cidade02);
-        cidade02.setId(cidade.getId());
+        cidade02.setId(cidade1.getId());
         return ResponseEntity.status(HttpStatus.OK).body(service.salvar(cidade02)+"ATUALIZADO COM SUCESSO");
     }
 }
