@@ -1,8 +1,5 @@
-package com.escola_info.escola_info.entities.world;
+package com.escola_info.escola_info.entities;
 
-
-import com.escola_info.escola_info.entities.Escola;
-import com.escola_info.escola_info.entities.Pessoa;
 
 import javax.persistence.*;
 import java.io.Serial;

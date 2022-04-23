@@ -1,7 +1,6 @@
 package com.escola_info.escola_info.service;
 
-import com.escola_info.escola_info.entities.Instrutor;
-import com.escola_info.escola_info.entities.world.Aluno;
+import com.escola_info.escola_info.entities.Aluno;
 import com.escola_info.escola_info.repository.Aluno_repository;
 import org.springframework.stereotype.Service;
 

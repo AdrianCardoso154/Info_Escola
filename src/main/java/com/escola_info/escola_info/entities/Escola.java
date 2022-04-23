@@ -1,6 +1,5 @@
 package com.escola_info.escola_info.entities;
 
-import com.escola_info.escola_info.entities.world.Aluno;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
 

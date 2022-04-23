@@ -1,7 +1,6 @@
 package com.escola_info.escola_info.resource;
 
-import com.escola_info.escola_info.entities.Escola;
-import com.escola_info.escola_info.entities.world.Aluno;
+import com.escola_info.escola_info.entities.Aluno;
 import com.escola_info.escola_info.service.Aluno_service;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
