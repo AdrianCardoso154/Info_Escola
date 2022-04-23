@@ -1,5 +1,6 @@
 package com.escola_info.escola_info.entities;
 
+import com.escola_info.escola_info.entities.world.Aluno;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
 
@@ -67,6 +68,13 @@ public class Escola implements Serializable {
 
     public List<Instrutor> getInstrutors() {
         return instrutors;
+    }
+    //LIGAÇÃO MANY TO ONE COM ALUNO
+        @OneToMany(mappedBy = "escola")
+        private List<Aluno> alunos = new ArrayList<>();
+
+    public List<Aluno> getAlunos() {
+        return alunos;
     }
 
     public UUID getId() {

@@ -1,13 +1,17 @@
 package com.escola_info.escola_info.entities;
 
 import javax.persistence.*;
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 @Entity
 @Table(name = "tb_instrutor")
-public class Instrutor extends Pessoa{
+public class Instrutor extends Pessoa implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
@@ -16,11 +20,9 @@ public class Instrutor extends Pessoa{
         super();
     }
 
-    public Instrutor(String name, String data_nsc, String sexo, String cpf, UUID id) {
+    public Instrutor(String name, String data_nsc, String sexo, String cpf) {
         super(name, data_nsc, sexo, cpf);
-        this.id = id;
     }
-
 
     //LIGAÇÃO MANY TO MANY COM ESCOLA
     @ManyToMany
