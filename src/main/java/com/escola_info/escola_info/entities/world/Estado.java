@@ -33,6 +33,10 @@ public class Estado implements Serializable {
     public Pais getPais(){
         return pais;
     }
+    public void setPais(Pais pais) {
+        this.pais = pais;
+    }
+
     //LIGAÇÃO MANY TO ONE COM CIDADE
     @OneToMany(mappedBy = "estado")
     @JsonIgnore

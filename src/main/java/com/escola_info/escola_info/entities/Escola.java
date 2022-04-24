@@ -57,6 +57,10 @@ public class Escola implements Serializable {
     @JoinColumn(name = "endereco_id")
     private Endereco endereco;
 
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
     public Endereco getEndereco(){
         return endereco;
     }
